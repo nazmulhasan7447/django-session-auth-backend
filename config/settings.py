@@ -1,5 +1,6 @@
 from django.core.management.utils import get_random_secret_key
 import os
+from pathlib import Path
 import sys
 import dj_database_url
 from corsheaders.defaults import default_headers
@@ -12,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-mn1k$-#carfm0ufhep@wx2*q%vja%*zf1awjpm_s17l+qnp30*'
+# SECRET_KEY = 'DJANGO_SECRET_KEY'
 # DEBUG = True
 # ALLOWED_HOSTS = ['*']
 
@@ -67,6 +68,7 @@ TEMPLATES = [
     },
 ]
 
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 WSGI_APPLICATION = 'config.wsgi.application'
 
 

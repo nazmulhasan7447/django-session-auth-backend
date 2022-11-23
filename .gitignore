@@ -4,3 +4,6 @@ cert.key
 cert.key
 /venv
 venv
+/venv/
+.idea
+venv
