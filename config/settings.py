@@ -159,7 +159,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "https://dolphin-app-a8u55.ondigitalocean.app"
+    "https://dolphin-app-a8u55.ondigitalocean.app",
+    "https://clownfish-app-9jdwk.ondigitalocean.app"
 ]
 
 CSRF_COOKIE_SAMESITE = 'Lax'
